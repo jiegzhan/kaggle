@@ -1,4 +1,4 @@
-### Project: Credit Card Fraud Detection
+### Project: Kaggle Credit Card Fraud Detection
 
 ### Highlights:
 
@@ -6,7 +6,7 @@
  - The purpose of this project is to **detect fraud credit card transactions**. 
  - The model was built with **Random Forest Classifier** on top of **Scikit Learn**.
 
-### Data: [Credit Card Fraud Detection](https://www.kaggle.com/mlg-ulb/creditcardfraud/data)
+### Data: [Kaggle Credit Card Fraud Detection](https://www.kaggle.com/mlg-ulb/creditcardfraud/data)
 
 ### Train:
 
@@ -30,6 +30,7 @@ y_pred = rf.predict(X_test)
 from sklearn.metrics import roc_auc_score
 roc_auc = roc_auc_score(y_test, y_pred)
 ```
+![roc_auc_curve](https://github.com/jiegzhan/kaggle/blob/master/Credit%20Card%20Fraud%20Detection/roc_auc.png)
 
 ### Reference:
  - [sklearn.ensemble.RandomForestClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier)
