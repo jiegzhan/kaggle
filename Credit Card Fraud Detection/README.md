@@ -1,33 +1,35 @@
-### Project: Classify Kaggle Consumer Finance Complaints
+### Project: Credit Card Fraud Detection
 
 ### Highlights:
 
- - This is a **multi-class text classification (sentence classification)** problem.
- - The purpose of this project is to **classify Kaggle Consumer Finance Complaints into 11 classes**. 
- - The model was built with **Convolutional Neural Network (CNN)** and **Word Embeddings** on **Tensorflow**.
+ - This is a **highly skewed binary classification** problem.
+ - The purpose of this project is to **detect fraud credit card transactions**. 
+ - The model was built with **Random Forest Classifier** on top of **Scikit Learn**.
 
-### Data: [Kaggle Consumer Finance Complaints](https://www.kaggle.com/cfpb/us-consumer-finance-complaints)
-
- - Input: **consumer_complaint_narrative**
-
-    - Example: "someone in north Carolina has stolen my identity information and has purchased items including XXXX cell phones thru XXXX on XXXX/XXXX/2015. A police report was filed as soon as I found out about it on XXXX/XXXX/2015. A investigation from XXXX is under way thru there fraud department and our local police department.\n"
-    
- - Output: **product**
-
-     - Example: Credit reporting
+### Data: [Credit Card Fraud Detection](https://www.kaggle.com/mlg-ulb/creditcardfraud/data)
 
 ### Train:
 
- - Command: python3 train.py training_data.file parameters.json
- - Example: ```python3 train.py ./data/consumer_complaints.csv.zip ./parameters.json```
- 
- A directory will be created during training, and the trained model will be saved in this directory. 
+```
+from sklearn.ensemble import RandomForestClassifier
+from sklearn import metrics
+
+rf = RandomForestClassifier(max_depth=10, random_state=42)
+rf.fit(X_train, y_train)
+```
 
 ### Predict:
 
- Provide the model directory (created when running ```train.py```) and new data to ```predict.py```.
- - Command: python3 predict.py ./trained_model_directory/ new_data.file
- - Example: ```python3 predict.py ./trained_model_1479757124/ ./data/small_samples.json```
+```
+y_pred = rf.predict(X_test)
+```
+
+### Evaluate:
+
+```
+from sklearn.metrics import roc_auc_score
+roc_auc = roc_auc_score(y_test, y_pred)
+```
 
 ### Reference:
- - [Implement a cnn for text classification in tensorflow](http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/)
+ - [sklearn.ensemble.RandomForestClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier)
