@@ -11,8 +11,8 @@
 ### Train:
 
 ```
-from sklearn.linear_model import LinearRegression
-lr = LinearRegression(normalize=True)
+from sklearn.ensemble import RandomForestRegressor
+lr = RandomForestRegressor(n_estimators=80, max_depth=100, random_state=42)
 lr.fit(X_train, y_train)
 ```
 
@@ -29,7 +29,6 @@ from sklearn.metrics import mean_squared_error, r2_score
 print(mean_squared_error(y_test, y_pred))
 print(r2_score(y_test, y_pred))
 ```
-![roc_auc_curve](https://github.com/jiegzhan/kaggle/blob/master/Credit%20Card%20Fraud%20Detection/roc_auc.png)
 
 ### Reference:
  - [sklearn.linear_model.LinearRegression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
