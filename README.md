@@ -2,4 +2,4 @@
 
 #### House Prices Advanced Regression Techniques @[Kaggle](https://www.kaggle.com/jiegzhan/house-price-prediction) @[Github](https://github.com/jiegzhan/kaggle/tree/master/House%20Prices%20Advanced%20Regression%20Techniques)
 
-#### TalkingData AdTracking Fraud Detection Challenge @[Kaggle](https://www.kaggle.com/jiegzhan/adtracking-fraud-detection) @[Github]()
+#### TalkingData AdTracking Fraud Detection Challenge @[Kaggle](https://www.kaggle.com/jiegzhan/adtracking-fraud-detection) @[Github](https://github.com/jiegzhan/kaggle/tree/master/TalkingData%20AdTracking%20Fraud%20Detection%20Challenge)
